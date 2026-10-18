@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { exhibits } from '@/lib/catalog';
+import { exhibits } from '../../../lib/catalog';
 export const dynamicParams = false;
 export function generateStaticParams() { return exhibits.map(item => ({ id: item.id })); }
 export async function generateMetadata({ params }) { const { id } = await params; return { title: exhibits.find(item => item.id === id)?.title || 'Exhibition not found' }; }

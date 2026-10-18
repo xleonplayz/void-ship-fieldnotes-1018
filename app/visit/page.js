@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { planVisit } from '@/lib/plan';
+import { planVisit } from '../../lib/plan';
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Your visit' };
 export default async function Visit({ searchParams }) {
